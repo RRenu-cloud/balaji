@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+<h1>About My Family</h1>
+{% for i in data %}
+<h1>{{i.name}}</h1>
+<i>{{i.created_at}}</i>
+<img src = "{{i.img.url}}" width = 30% height = 30%>
+<p>{{i.description}}</p>
+{% endfor %}
+
+
+</body>
+</html>
